@@ -18,7 +18,7 @@ import (
 	"net/http"
 
 	"github.com/go-openapi/runtime/middleware/denco"
-	"github.com/smacker/go-swagger-gen/fixtures/goparsing/petstore/models"
+	"github.com/quangpn88/go-swagger-gen/fixtures/goparsing/petstore/models"
 )
 
 // An OrderID parameter model.

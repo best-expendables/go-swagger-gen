@@ -17,8 +17,8 @@ package main
 import (
 	"log"
 
-	"github.com/smacker/go-swagger-gen/fixtures/goparsing/petstore"
-	"github.com/smacker/go-swagger-gen/fixtures/goparsing/petstore/rest"
+	"github.com/quangpn88/go-swagger-gen/fixtures/goparsing/petstore"
+	"github.com/quangpn88/go-swagger-gen/fixtures/goparsing/petstore/rest"
 )
 
 var (
