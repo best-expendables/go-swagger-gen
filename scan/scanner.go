@@ -168,7 +168,7 @@ var Debug = safeConvert(os.Getenv("DEBUG"))
 // When something in the discovered items requires a type that is contained in the includes or excludes it will still be
 // in the spec.
 func Application(opts Opts) (*spec.Swagger, error) {
-	parser, err := newAppScanner(&opts, nil, nil)
+	parser, err := newAppScanner(&opts, nil, packageFilters{packageFilter{Name: "bitbucket.org/snapmartinc/clients"}})
 	if err != nil {
 		return nil, err
 	}
