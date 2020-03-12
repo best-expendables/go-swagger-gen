@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"go/ast"
 	"log"
+	"strings"
 
 	"golang.org/x/tools/go/loader"
 )
@@ -75,6 +76,9 @@ func (pc *programClassifier) Classify(prog *loader.Program) (*classifiedProgram,
 	for pkg, pkgInfo := range prog.AllPackages {
 		if Debug {
 			log.Printf("analyzing: %s\n", pkg.Path())
+		}
+		if strings.Contains(pkg.Path(), "vendor") {
+			continue
 		}
 		if pc.Includes.HasFilters() {
 			if !pc.Includes.Matches(pkg.Path()) {
