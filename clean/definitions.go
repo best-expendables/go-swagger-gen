@@ -1,6 +1,7 @@
 package clean
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/go-openapi/analysis"
@@ -13,10 +14,12 @@ func RemoveUnusedDefinitions(swspec *spec.Swagger) {
 	foundDefRefsNames := aSpec.AllDefinitionReferences()
 	foundDefNames := make([]string, len(foundDefRefsNames), len(foundDefRefsNames))
 	for i, name := range foundDefRefsNames {
+		fmt.Println(name)
 		foundDefNames[i] = strings.Replace(name, "#/definitions/", "", 1)
 	}
-
+	fmt.Println("----------------------------------------------")
 	for name := range swspec.Definitions {
+		fmt.Println(name)
 		if inStringList(foundDefNames, name) {
 			continue
 		}
