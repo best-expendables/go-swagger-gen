@@ -77,7 +77,7 @@ func (pc *programClassifier) Classify(prog *loader.Program) (*classifiedProgram,
 		if Debug {
 			log.Printf("analyzing: %s\n", pkg.Path())
 		}
-		if strings.Contains(pkg.Path(), "vendor") {
+		if strings.Contains(pkg.Path(), "vendor/") {
 			continue
 		}
 		if pc.Includes.HasFilters() {
