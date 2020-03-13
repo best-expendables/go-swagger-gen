@@ -16,7 +16,7 @@ package models
 
 import (
 	"github.com/go-openapi/strfmt"
-	"github.com/quangpn88/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"
+	"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"
 )
 
 // NoModel is a struct without an annotation.

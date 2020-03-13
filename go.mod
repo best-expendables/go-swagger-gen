@@ -1,4 +1,4 @@
-module github.com/quangpn88/go-swagger-gen
+module bitbucket.org/snapmartinc/go-swagger-gen
 
 go 1.12
 

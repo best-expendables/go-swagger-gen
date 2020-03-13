@@ -28,8 +28,8 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/validate"
 	"github.com/jessevdk/go-flags"
-	"github.com/quangpn88/go-swagger-gen/clean"
-	"github.com/quangpn88/go-swagger-gen/scan"
+	"bitbucket.org/snapmartinc/go-swagger-gen/clean"
+	"bitbucket.org/snapmartinc/go-swagger-gen/scan"
 )
 
 var opts struct{}
