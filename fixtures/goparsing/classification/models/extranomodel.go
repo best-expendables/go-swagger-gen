@@ -18,7 +18,7 @@ import (
 	"time"
 
 	"github.com/go-openapi/strfmt"
-	"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"
+	"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"
 )
 
 // A Something struct is used by other structs

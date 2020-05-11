@@ -14,7 +14,7 @@
 
 package models
 
-import "bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"
+import "github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"
 
 // StoreOrder represents an order in this application.
 //

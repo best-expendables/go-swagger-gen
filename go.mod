@@ -1,4 +1,4 @@
-module bitbucket.org/snapmartinc/go-swagger-gen
+module github.com/best-expendables/go-swagger-gen
 
 go 1.12
 

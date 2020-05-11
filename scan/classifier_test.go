@@ -56,9 +56,9 @@ func classifierProgram() *loader.Program {
 	var ldr loader.Config
 	ldr.ParserMode = goparser.ParseComments
 	ldr.Build = &gobuild.Default
-	ldr.ImportWithTests("bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification")
-	ldr.ImportWithTests("bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/models")
-	ldr.ImportWithTests("bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/operations")
+	ldr.ImportWithTests("github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification")
+	ldr.ImportWithTests("github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification/models")
+	ldr.ImportWithTests("github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification/operations")
 	prog, err := ldr.Load()
 	if err != nil {
 		log.Fatal(err)
@@ -70,9 +70,9 @@ func petstoreProgram() *loader.Program {
 	var ldr loader.Config
 	ldr.ParserMode = goparser.ParseComments
 	ldr.Build = &gobuild.Default
-	ldr.ImportWithTests("bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/petstore")
-	ldr.ImportWithTests("bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/petstore/models")
-	ldr.ImportWithTests("bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/petstore/rest/handlers")
+	ldr.ImportWithTests("github.com/best-expendables/go-swagger-gen/fixtures/goparsing/petstore")
+	ldr.ImportWithTests("github.com/best-expendables/go-swagger-gen/fixtures/goparsing/petstore/models")
+	ldr.ImportWithTests("github.com/best-expendables/go-swagger-gen/fixtures/goparsing/petstore/rest/handlers")
 	prog, err := ldr.Load()
 	if err != nil {
 		log.Fatal(err)
@@ -83,7 +83,7 @@ func petstoreProgram() *loader.Program {
 func invalidProgram(name string) *loader.Program {
 	var ldr loader.Config
 	ldr.ParserMode = goparser.ParseComments
-	ldr.ImportWithTests("bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/" + name)
+	ldr.ImportWithTests("github.com/best-expendables/go-swagger-gen/fixtures/goparsing/" + name)
 	prog, err := ldr.Load()
 	if err != nil {
 		log.Fatal(err)
@@ -131,10 +131,10 @@ func TestClassifierInclude(t *testing.T) {
 	prog := classificationProg
 	classifier := &programClassifier{
 		Includes: packageFilters([]packageFilter{
-			packageFilter{"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification"},
-			packageFilter{"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"},
-			packageFilter{"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/operations"},
-			packageFilter{"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/operations_annotation"},
+			packageFilter{"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification"},
+			packageFilter{"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"},
+			packageFilter{"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification/operations"},
+			packageFilter{"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification/operations_annotation"},
 		}),
 	}
 	classified, err := classifier.Classify(prog)
@@ -160,7 +160,7 @@ func TestClassifierExclude(t *testing.T) {
 	prog := classificationProg
 	classifier := &programClassifier{
 		Excludes: packageFilters([]packageFilter{
-			packageFilter{"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"},
+			packageFilter{"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/classification/transitive/mods"},
 		}),
 	}
 	classified, err := classifier.Classify(prog)

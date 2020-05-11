@@ -17,8 +17,8 @@ package main
 import (
 	"log"
 
-	"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/petstore"
-	"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/petstore/rest"
+	"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/petstore"
+	"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/petstore/rest"
 )
 
 var (

@@ -18,7 +18,7 @@ import (
 	"net/http"
 
 	"github.com/go-openapi/runtime/middleware/denco"
-	"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/petstore/rest/handlers"
+	"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/petstore/rest/handlers"
 )
 
 // ServeAPI serves this api

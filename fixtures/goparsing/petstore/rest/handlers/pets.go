@@ -19,7 +19,7 @@ import (
 	"time"
 
 	"github.com/go-openapi/runtime/middleware/denco"
-	"bitbucket.org/snapmartinc/go-swagger-gen/fixtures/goparsing/petstore/models"
+	"github.com/best-expendables/go-swagger-gen/fixtures/goparsing/petstore/models"
 )
 
 // A GenericError is the default error message that is generated.
